@@ -4,130 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="javascript.js" defer></script>
     <title>Document</title>
     <style>
-        html {
-  font-family: sans-serif;
-}
-
-h2 {
-  font-size: 16px;
-}
-
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
-
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
-    </style>
-</head>
-<body>
-
-    <!-- <p class="admitted"></p>
-    <p class="refused"></p> -->
-
-    <section class="preview"></section>
-    
-<script>
-
-
-
-
-
-    let i = 500;
-    const para = document.createElement('p');
-
-    function isPrime(num) {
-      for(let i = 2; i < num; i++) {
-        if(num % i === 0) {
-          return false;
-        }
+      div {
+        background-color: black;
+        color: white;
+        font-size: 40px;
+        display: flex;
+        height: 40px;
+        gap: 10px;
+        padding: 10px;
       }
 
-      return true;
-    }
+      div button{
+        flex-grow: 1;
+      }
+    </style>
+    </head>
 
-    while (i > 0){
-        if (isPrime(i) == true && i > 1){
-            para.textContent += i + ', ';
-        }
-        i--;
-    }
+<body>
+    <div id="container">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
 
-    const lastTwo = para.textContent.slice(0, -2);
-    para.textContent = lastTwo + ".";
-
-    // Add your code here
-
-
-    // Don't edit the code below here!
-    const section = document.querySelector('section');
-    section.appendChild(para);
-
-
-/* const name = 'Mustafa';
-const para = document.createElement('p');
-
-const phonebook = [
-  { name : 'Chris', number : '1549' },
-  { name : 'Li Kang', number : '9634' },
-  { name : 'Anne', number : '9065' },
-  { name : 'Francesca', number : '3001' },
-  { name : 'Mustafa', number : '6888' },
-  { name : 'Tina', number : '4312' },
-  { name : 'Bert', number : '7780' },
-  { name : 'Jada', number : '2282' },
-]
-
-for(i=0; i<phonebook.length; i++){
-    if(phonebook[i].name == name){
-        para.textContent = phonebook[i].name + ': ' + phonebook[i].number;
-        break;
-    } else {
-        para.textContent = "name not found";
-    }
-}
-
-const section = document.querySelector('section');
-section.appendChild(para); */
-
-</script>
-
-<!-- 
-
-    Loop 2:
-    
-    The user enters a name in the variable name
-    We look in the phonebook one by one to see if there is a match
-    IF there is a match output the name + the phonenumber
-    IF there is no match we search for the next one in line
-    IF there are 0 matches we exit the loop and 
-    output that we couldn't find the name
-
-    Loop 3:
-
-
-
-
-
- -->
-
-
-
-
-
-
-
-
-
-</script>
-
+    <div id="result"></div>
+    <div id="end"></div>
 
 </body>
+    
+
+
 </html>
